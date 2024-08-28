@@ -1,10 +1,10 @@
-import { NavLink } from 'react-router-dom';
+
 import brixlogo from "../../Images/brixlogo.png"
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+
 import { Divider } from 'antd';
 import { FaBars } from "react-icons/fa6";
-import Aboutpage from '../Aboutpage';
+
 
 const NavBar = ({setActivePage}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ const NavBar = ({setActivePage}) => {
                                                 <div className='row max-width-80vw'>
                                                     {each.submenu.map((submenuItem, submenuIndex) => (
                                                         <div className={`${submenuItem?.categories ? 'col-12 col-md-3 ' : 'col-12'}`}>
-                                                            {/* <NavLink to={submenuItem.href} className="dropdown-item fs_14 tc-black Rubik" key={submenuIndex}>{submenuItem.name} {submenuItem?.categories && <img src={solutionMenuArrow} className='px-3' alt='solutionMenuArrow'/>}</NavLink> */}
+                                                           
                                                             {submenuItem?.categories && <Divider className='my-2' />}
                                                             {submenuItem?.categories?.map((category, catIndx) => (
                                                             <a to={category.href} className="dropdown-item fs_14 tc-black text-wrap fw-500" key={catIndx}>{category.name}</a>
